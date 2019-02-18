@@ -64,6 +64,41 @@ h5 {
     width: 100%;
     height: 100%;
     z-index: 0;
+
+    @media screen and (max-width: 600px) {
+        z-index: -1;
+    }
+}
+
+.button {
+    border: 1px solid white;
+    border-radius: 16px;
+    background-color: transparent;
+    color: white;
+    padding: .3em 1em;
+    margin: .5em;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    transition: all ease .3s;
+    z-index: 1;
+
+    &:hover {
+        color: black;
+        background: white; 
+    }
+
+    &[disabled] {
+        cursor: not-allowed;
+        color: grey;
+        border-color: grey;
+
+        &:hover {
+            color: grey;
+            background: transparent; 
+        }
+    }
 }
 
 @keyframes spin {
