@@ -10,7 +10,8 @@ class PlanetList extends Component {
             planets: [],
             nextPageUrl: null,
             prevPageUrl: null,
-            loading: false
+            loading: false,
+            isDetails: false
         }
 
         this.fetchData = this.fetchData.bind(this);
@@ -42,7 +43,7 @@ class PlanetList extends Component {
 
     render() {
         let planetNodes = [];
-        planetNodes = this.state.planets.map(planet => <Planet data={planet} />)
+        planetNodes = this.state.planets.map(planet => <Planet handleDetailsPage={this.props.handleDetailsPage} key={planet.url} data={planet} />)
 
         return (
             <section className='planet-list'>
@@ -52,11 +53,11 @@ class PlanetList extends Component {
                         <button className='button button--prev' disabled={this.state.prevPageUrl == null} onClick={() => this.handleSwitchPage(this.state.prevPageUrl)}>prev</button>
                         <button className='button button--next' disabled={this.state.nextPageUrl == null} onClick={() => this.handleSwitchPage(this.state.nextPageUrl)}>next</button>
                     </div>
-                </header>
-
+                </header> 
                 <div className='planet-list__list'>
                     {this.state.loading ? <span className='loading'></span> : planetNodes}
                 </div>
+                
             </section>
         );
     }

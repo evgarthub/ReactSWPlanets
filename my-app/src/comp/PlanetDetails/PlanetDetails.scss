@@ -1,0 +1,68 @@
+.planet-details {
+    z-index: 1;
+
+    &__header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2em;
+    }
+
+    &__about {
+        display: flex;
+        flex-flow: row wrap;
+        margin: -1em;
+    }
+
+    &__prop {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        margin: .5em 0;
+        border-bottom: 1px dotted rgba(255,255,255,.2);
+        font-size: 1.4em;
+
+        &-text {
+            flex: 1 1 auto;
+        }
+    }
+
+    &__info {
+        margin: 1em;
+        flex: 1 1 auto;
+    }
+
+    &__logo {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        flex: 1 1 auto;
+        margin: 1em;
+
+        &-letter {
+            font-size: 10em;
+            line-height: .9;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        &-image {
+            border-radius: 50%;
+            border: 6px solid white;
+            height: 20em;
+            width: 20em;
+            box-shadow: 0 0 10px 3px rgba(0, 0, 0, .3); 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        &-name {
+            font-size: 2em;
+            line-height: 1;
+            font-family: 'Orbitron', sans-serif;
+            margin-top: 1em;
+        }
+    }
+}

@@ -66,3 +66,12 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+todo:
+1. Handle Animation Between Views 
+2. Create mixins for buttons, typography, lists, etc. And reuse them inside Components (.scss: @import).
+3. Color and pattern can be based on planet's terrain type and water percentage.
+4. Planets could be spheres with proper rotation speed and surface (look at #3).
+5. Details page can contain dvd boxes where this planet is appeared.
+6. Details page can be more interactive with graphs and pies.
+7. Filterig by terrain, water, etc.

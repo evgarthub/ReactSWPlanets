@@ -17,33 +17,5 @@
         background-size: cover;
         background-position: center; 
     }
-
-    &__info {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        z-index: 10;
-        padding: 1em;
-        background-color: rgba(255,255,255, .98);
-        border-radius: 16px;
-        color: black;
-        font-size: 12px;
-        width: 100%;
-
-        &-title {
-            margin-bottom: 1em;
-        }
-        
-        &:before {
-            content: "";
-            position: absolute;
-            top: -15px;
-            left: calc(50% - 20px);
-            border-color: transparent transparent rgba(255,255,255, .98) transparent;
-            border-style: solid;
-            border-width: 0 20px 15px 20px;
-        }
-    }
 }
 

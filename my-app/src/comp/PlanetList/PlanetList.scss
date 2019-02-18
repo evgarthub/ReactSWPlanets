@@ -4,6 +4,7 @@
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 2em;
     }
 
     &__list {
@@ -16,7 +17,6 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: flex-end;
-        z-index: 1;
     }
 }
 
@@ -32,6 +32,7 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
     transition: all ease .3s;
+    z-index: 1;
 
     &:hover {
         color: black;
