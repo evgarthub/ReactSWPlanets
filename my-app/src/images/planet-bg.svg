@@ -1,0 +1,20 @@
+<svg width="1600" height="800" xmlns="http://www.w3.org/2000/svg">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect fill-opacity="0" id="svg_1" height="800" width="1600" fill="#ffffff"/>
+  <g id="svg_2">
+   <polygon fill-opacity="0.1" id="svg_3" points="798,99 -2,199 -2,799 1598,799 1598,199 " fill="#ffffff"/>
+   <polygon fill-opacity="0.2" id="svg_4" points="798,199 -2,399 -2,799 1598,799 1598,399 " fill="#ffffff"/>
+   <polygon fill-opacity="0.3" id="svg_5" points="798,299 -2,599 -2,799 1598,799 1598,599 " fill="#ffffff"/>
+   <polygon fill-opacity="0.4" id="svg_6" points="1598,799 798,399 -2,799 " fill="#ffffff"/>
+   <polygon fill-opacity="0.5" id="svg_7" points="1277,798 797,498 317,798 " fill="#ffffff"/>
+   <polygon fill-opacity="0.6" id="svg_8" points="531.2999877929688,799 1064.699951171875,799 798,599 " fill="#ffffff"/>
+   <polygon id="svg_9" points="682.0999755859375,799 912.2999877929688,799 798,699 " fill="#ffffff"/>
+  </g>
+ </g>
+</svg>
