@@ -3,11 +3,12 @@ import Planet from '../Planet/Planet';
 import './PlanetList.scss';
 
 class PlanetList extends Component {
-    constructor() {
+    constructor(props) {
         super();
         this.state = {
             count: 0,
             planets: [],
+            currentPageUrl: props.listPage,
             nextPageUrl: null,
             prevPageUrl: null,
             loading: false,
@@ -19,11 +20,14 @@ class PlanetList extends Component {
     }
 
     componentDidMount() {
-        this.fetchData("https://swapi.co/api/planets/");
+        this.fetchData(this.state.currentPageUrl ? this.state.currentPageUrl : "https://swapi.co/api/planets/");
     }
 
     handleSwitchPage(pageUrl) {
         this.fetchData(pageUrl);
+        this.setState({
+            currentPageUrl: pageUrl
+        });
     }
 
     fetchData(url) {
@@ -43,15 +47,28 @@ class PlanetList extends Component {
 
     render() {
         let planetNodes = [];
-        planetNodes = this.state.planets.map(planet => <Planet handleDetailsPage={this.props.handleDetailsPage} key={planet.url} data={planet} />)
+        planetNodes = this.state.planets.map(planet => (
+                <Planet 
+                    currentPageUrl={this.state.currentPageUrl}
+                    handleDetailsPage={this.props.handleDetailsPage} 
+                    key={planet.url} 
+                    data={planet} />
+            )
+        )
 
         return (
             <section className='planet-list'>
                 <header className='planet-list__header'>
                     <h4 className='planet-list__counter'>Total number of planets: {this.state.count}</h4>
                     <div className='planet-list__controls'>
-                        <button className='button button--prev' disabled={this.state.prevPageUrl == null} onClick={() => this.handleSwitchPage(this.state.prevPageUrl)}>prev</button>
-                        <button className='button button--next' disabled={this.state.nextPageUrl == null} onClick={() => this.handleSwitchPage(this.state.nextPageUrl)}>next</button>
+                        <button 
+                            className='button button--prev' 
+                            disabled={this.state.prevPageUrl == null} 
+                            onClick={() => this.handleSwitchPage(this.state.prevPageUrl)}>prev</button>
+                        <button 
+                            className='button button--next' 
+                            disabled={this.state.nextPageUrl == null} 
+                            onClick={() => this.handleSwitchPage(this.state.nextPageUrl)}>next</button>
                     </div>
                 </header> 
                 <div className='planet-list__list'>

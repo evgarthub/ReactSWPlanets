@@ -46,7 +46,7 @@ class PlanetDetails extends Component {
             <div className='planet-details'>
                 <header className='planet-details__header'>
                     <h4 className='planet-details__title'>Detailed info of {this.state.name} planet</h4>
-                    <button className='planet-details__button button button--close' onClick={(e) => this.props.handleDetailsPage(false, '')}>close</button>
+                    <button className='planet-details__button button button--close' onClick={(e) => this.props.handleDetailsPage(false, '', '')}>close</button>
                 </header>
                 
                 <div className='planet-details__about'>

@@ -11,6 +11,7 @@ class Planet extends Component {
             id: props.url,
             name: props.data.name,
             url: props.data.url,
+            currentPageUrl: props.currentPageUrl,
             setPlanetColor: {
                 backgroundColor: "#ffffff"
             }
@@ -52,7 +53,7 @@ class Planet extends Component {
 
     render() {
         return (
-            <section className='planet' onClick={(e) => this.props.handleDetailsPage(true, this.state.url)}>
+            <section className='planet' onClick={(e) => this.props.handleDetailsPage(true, this.state.url, this.state.currentPageUrl)}>
                 <div className='planet__logo' style={this.state.setPlanetColor}></div>
                 <h4 className='planet__title'>{this.state.name}</h4>
             </section>

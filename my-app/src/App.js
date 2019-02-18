@@ -9,16 +9,18 @@ class App extends Component {
     super();
     this.state = {
       isDetails: false,
-      linkToOpen: ''
+      linkToOpen: '',
+      listPage: null
     }
     this.handleDetailsPage = this.handleDetailsPage.bind(this);
   }
 
-  handleDetailsPage(value, url) {
-    this.setState({
+  handleDetailsPage(value, url, currentPageUrl) {
+    this.setState((prevState) => ({
         isDetails: value,
-        linkToOpen: url
-    });
+        linkToOpen: url,
+        listPage: currentPageUrl ? currentPageUrl : prevState.listPage
+    }));
   }
 
   render() {
@@ -50,7 +52,7 @@ class App extends Component {
 
         <div className='app'>
           <h1 className='app__title'>Planets of Star Wars world</h1>
-          {this.state.isDetails ? <PlanetDetails url={this.state.linkToOpen} handleDetailsPage={this.handleDetailsPage} /> : <PlanetList handleDetailsPage={this.handleDetailsPage} /> }
+          {this.state.isDetails ? <PlanetDetails url={this.state.linkToOpen} handleDetailsPage={this.handleDetailsPage} /> : <PlanetList handleDetailsPage={this.handleDetailsPage} listPage={this.state.listPage} /> }
         </div>
       </>
     );
